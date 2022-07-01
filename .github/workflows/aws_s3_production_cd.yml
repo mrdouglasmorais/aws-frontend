@@ -2,7 +2,7 @@ name: CD deploy new feature environment production
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
