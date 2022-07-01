@@ -17,12 +17,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Testes
-        run: npm install && npm test
-
-      - name: Buildando projeto
-        run: npm run deploy:production
-
       - name: Publicando na AWS de Producao
-        run: npm run deploy:production
+        run: npm install && npm run deploy:production
      
