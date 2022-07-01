@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:default": "aws s3 sync build/ s3://hcreacts3-prod --acl public-read",
+    "deploy:default": "aws s3 sync build/ s3://hcreacts3 --acl public-read",
     "deploy:develop": "npm run build && aws s3 sync ./build/ ss3://hcreacts3-develop  --acl public-read",
     "deploy:production": "npm run build && aws s3 sync ./build/ s3://hcreacts3-prod  --acl public-read"
   },
