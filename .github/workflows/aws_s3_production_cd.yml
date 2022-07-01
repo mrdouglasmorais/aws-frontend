@@ -1,4 +1,4 @@
-name: CD deploy new feature environment production
+name: Publicando em ambiente de produção
 on:
   push:
     branches:
@@ -17,6 +17,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Publicando na AWS de Producao
+      - name: Publicando na AWS em Prod
         run: npm install && npm run deploy:production
      
